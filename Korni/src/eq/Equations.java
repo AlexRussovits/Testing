@@ -13,12 +13,25 @@ import java.util.ArrayList;
  */
 public class Equations {
     public ArrayList Discrimant(int a, int b, int c) {
-        double D = Math.pow(b, 2)-4*a*c;
+        double D = ((Math.pow(b, 2)-4*a*c));
         if (D>=1) {
             double x1 = (-b + Math.sqrt(D)) / (2*a);
             double x2 = (-b - Math.sqrt(D)) / (2*a);
-            ArrayList<Roots> x1x2 = new ArrayList<>();
+            ArrayList<Double> roots = new ArrayList<>();
+            roots.add(x1);
+            roots.add(x2);
+            return roots;
         }
-        return 0;       
+        else if(D==0) {
+            double x1 = (-b + Math.sqrt(D)) / (2*a);
+            ArrayList<Double> roots = new ArrayList<>();
+            roots.add(x1);
+            return roots;
+        }
+        else{
+            ArrayList<String> roots = new ArrayList<>();
+            roots.add("Нет решения");
+            return roots; 
+        }            
     }
 }
