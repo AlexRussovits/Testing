@@ -6,8 +6,10 @@
 package eq1;
 
 import eq.Equations;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -24,7 +26,21 @@ public class testEQ {
     @Test
     public void noRoots() {
     Equations obj = new Equations();
+    ArrayList tulemus = obj.Discrimant(3, -3, 2);
+    //Assert.assertTrue("Нет решения", tulemus);    
+    }
     
+    @Test
+    public void oneRoot() {
+    Equations obj = new Equations();
+    ArrayList tulemus = obj.Discrimant(1, 2, 1);
+    //Assert.assertTrue("Нет решения", tulemus);    
+    }
+    
+    @Test
+    public void twoRoots() {
+    Equations obj = new Equations();
+    ArrayList tulemus = obj.Discrimant(4,2,-6); 
     }
     
     @BeforeClass
