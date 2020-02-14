@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author pupil
  */
 public class Equations {
-    public ArrayList Discrimant(int a, int b, int c) {
+    public ArrayList Discrimant(int a, int b, int c, double x1, double x2) {
         double D = ((Math.pow(b, 2)-4*a*c));
         if (D>=1) {
             double x1 = (-b + Math.sqrt(D)) / (2*a);
